@@ -18,3 +18,24 @@
   // close the else block
 
 // close the function block
+var counter = 0;
+function rollDice(){
+
+  let roll = Math.floor(Math.random()*6)+1;
+  counter += 1;
+
+  if (roll == 6) {
+     alert("6! You won " + counter);
+counter = 0;
+    }
+
+  else if (roll > 8){
+     alert("You ran over 8");
+  }
+  else {
+
+      rollDice();
+
+  }
+
+}
