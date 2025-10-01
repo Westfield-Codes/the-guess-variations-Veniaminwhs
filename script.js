@@ -1,27 +1,26 @@
-/* Define a function called rollDice */
-var counter = 0;
-function rollDice(){
-  // create a variable called roll, set it equal to random 1-6
-  //let roll = Math.floor(Math.random()*6)+1;
-  let roll = Math.floor(Math.random()*6)+1;
-  counter += 1;
-  // if roll equals 6, display "6! You win!"
-  if (roll == 6) {
-     alert("6! You won " + counter);
-counter = 0;
-    }
+/* Simple Guess Program */
 
-  // otherwise:
+// define function guessGame
+function guessGame (){
+  // generate a random integer 1-100
+  let answer = Math.floor(Math.random()*100)+1;
+  // display the integer for testing purposes only
+  
+  // create guess and set equal to 0 
+  let guess = 0;
+  // loop while guess is not equal to answer
+  while (guess != answer);
+    // set guess equal to asking user to "Guess a number, 1-100"
+    alert(guess == )
+    // if guess equals answer display "Correct!" 
 
-  // use a confirm and say: "You rolled a [roll]"
-  else if (roll > 8){
-     alert("You ran over 8");
-  }
-  else {
-      // confirm("You rolled a " + roll);
-  // then call rollDice again.
-      rollDice();
-  // close the else block
-  }
-// close the function block
+    // or if guess is greater than answer display "Too high!" 
+
+    // or if guess is less than answer display "Too low!" 
+
+    // else say "Bad input"
+
+  // end the loop
+
+// end the function
 }
