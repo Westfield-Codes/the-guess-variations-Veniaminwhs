@@ -1,26 +1,37 @@
-/* Simple Guess Program */
+function newGame () {
+  let again = true;
+  let game = 0;
+  while (again == true) {
+    games++;
+    if (game > 1) {
+      again = confirm("Play again?" )
+    }
+    guessGame
 
-// define function guessGame
-function guessGame (){
-  // generate a random integer 1-100
-  let answer = Math.floor(Math.random()*100)+1;
-  // display the integer for testing purposes only
-  
-  // create guess and set equal to 0 
+    }
+  }
+
+function newGame (){
+
+   let answer = Math.floor(Math.random()*100)+1
   let guess = 0;
-  // loop while guess is not equal to answer
-  while (guess != answer);
-    // set guess equal to asking user to "Guess a number, 1-100"
-    alert(guess == )
-    // if guess equals answer display "Correct!" 
-
-    // or if guess is greater than answer display "Too high!" 
-
-    // or if guess is less than answer display "Too low!" 
-
-    // else say "Bad input"
-
-  // end the loop
-
-// end the function
+  while (guess !== answer) {
+    let input = prompt("Guess a number (1-100) or type 'q' to quit:");
+    if (input === null || input.toLowerCase() === 'q') {
+      alert ("Quitter!");
+      break;
+    }
+    guess = Number(input);
+    if (isNaN(guess) || guess < 1 || guess > 100) {
+      alert("Bad input! Please enter a number between 1 and 100.");
+    } else if (guess === answer) {
+      alert("Correct! The numbder was " + answer);
+      break;
+    } else if (guess > answer) {
+      alert("Too high!");
+    } else {
+      alert("Too low!");
+    }
+  }
 }
+
