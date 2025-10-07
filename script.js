@@ -4,7 +4,7 @@ function newGame () {
   while (again == true) {
     games++;
     if (game > 1) {
-      again = confirm("Play again?" )
+      again = confirm("Play again?" );
     }
     guessGame
 
